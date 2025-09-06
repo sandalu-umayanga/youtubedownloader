@@ -6,27 +6,90 @@ A modern JavaFX-based YouTube downloader with a simple GUI that delegates downlo
 - Self-contained runtime image via jlink (no separate JRE needed)
 - Format listing, progress logs, and basic controls
 
-## Requirements
+## 🚀 Quick Installation for Users
+
+### Windows Installation
+
+1. **Download or Clone** this repository:
+   ```powershell
+   git clone https://github.com/sandalu-umayanga/youtubedownloader.git
+   cd youtubedownloader
+   ```
+
+2. **Build the application** (requires Java 21 and Maven):
+   ```powershell
+   mvn -Pjlink clean javafx:jlink
+   ```
+
+3. **Install to your system**:
+   - **Option A**: Right-click PowerShell and "Run as Administrator", then:
+     ```powershell
+     .\install.ps1
+     ```
+   - **Option B**: Double-click `YouTubeDownloader-installer.bat`
+
+4. **Install yt-dlp** for downloading functionality:
+   ```powershell
+   pip install yt-dlp
+   ```
+   Or download from: https://github.com/yt-dlp/yt-dlp/releases
+
+5. **Launch the application**:
+   - Use the Desktop shortcut "YouTube Downloader (No CMD)" (recommended - no command prompt window)
+   - Or run from Start Menu
+   - Or run `YouTubeDownloader.bat` from command line
+
+### Linux Installation
+
+1. **Download or Clone** this repository:
+   ```bash
+   git clone https://github.com/sandalu-umayanga/youtubedownloader.git
+   cd youtubedownloader
+   ```
+
+2. **Build and Install**:
+   ```bash
+   ./build-package.sh
+   sudo ./install.sh
+   ```
+
+3. **Install yt-dlp**:
+   ```bash
+   pip install yt-dlp
+   ```
+
+### Uninstallation
+
+- **Windows**: Run `uninstall.ps1` as Administrator
+- **Linux**: Run `sudo ./uninstall.sh`
+
+### Windows Notes
+
+The installer creates a special "No CMD" shortcut that launches the application using `javaw.exe` instead of `java.exe`, eliminating the background command prompt window that would otherwise appear.
+
+## 🛠️ Developer Instructions
+
+### Requirements
 
 - Java 21 (JDK)
 - Maven 3.8+
 - yt-dlp installed on the machine for actual downloads
 
-## Quick start
+### Quick start
 
 ```bash
 mvn clean compile
 mvn javafx:run
 ```
 
-## Build a self-contained image (Linux default)
+### Build a self-contained image (Linux default)
 
 ```bash
 mvn -Pjlink clean javafx:jlink
 ./target/image/bin/java -m youtubedownloader/com.snake.youtubedownloader.App
 ```
 
-## Package for Linux
+### Package for Linux
 
 - One-shot helper:
 
@@ -35,19 +98,8 @@ mvn -Pjlink clean javafx:jlink
 ```
 
 Artifacts will be placed under `dist/`, e.g. `dist/YouTubeDownloader-<version>-linux.tar.gz`.
-Install from a build/extracted folder:
 
-```bash
-sudo ./install.sh
-```
-
-Uninstall:
-
-```bash
-sudo ./uninstall.sh
-```
-
-## Windows packaging
+### Windows packaging
 
 - To produce a Windows .exe, run on Windows with JDK 21 that includes jpackage:
 

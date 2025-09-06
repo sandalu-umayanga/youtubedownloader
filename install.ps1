@@ -28,24 +28,33 @@ New-Item -ItemType Directory -Force -Path $InstallDir | Out-Null
 
 # Copy runtime image
 Write-Host "Copying application files..."
-Copy-Item -Path "image\*" -Destination $InstallDir -Recurse -Force
+Copy-Item -Path "target\image\*" -Destination $InstallDir -Recurse -Force
 
 # Create Windows launcher script
 Write-Host "Creating Windows launcher..."
 $LauncherContent = @"
 @echo off
 cd /d "%~dp0"
-start "" "bin\java.exe" -Dprism.order=d3d -m youtubedownloader/com.snake.youtubedownloader.App %*
+"bin\javaw.exe" -Dprism.order=d3d -m youtubedownloader/com.snake.youtubedownloader.App %*
 "@
 $LauncherContent | Out-File -FilePath "$InstallDir\YouTubeDownloader.bat" -Encoding ASCII
+
+# Create invisible VBS launcher
+Write-Host "Creating invisible launcher..."
+$VBSLauncherContent = @"
+Set objShell = CreateObject("WScript.Shell")
+objShell.CurrentDirectory = "$InstallDir"
+objShell.Run "bin\javaw.exe -Dprism.order=d3d -m youtubedownloader/com.snake.youtubedownloader.App", 0, False
+"@
+$VBSLauncherContent | Out-File -FilePath "$InstallDir\YouTubeDownloader-Silent.vbs" -Encoding ASCII
 
 # Create desktop shortcut
 Write-Host "Creating desktop shortcut..."
 $WshShell = New-Object -comObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$DesktopPath\YouTube Downloader.lnk")
+$Shortcut = $WshShell.CreateShortcut("$DesktopPath\YouTube Downloader (No CMD).lnk")
 $Shortcut.TargetPath = "$InstallDir\YouTubeDownloader.bat"
 $Shortcut.WorkingDirectory = $InstallDir
-$Shortcut.Description = "YouTube Downloader - Download videos from YouTube"
+$Shortcut.Description = "YouTube Downloader - No Command Prompt"
 $Shortcut.Save()
 
 # Create Start Menu shortcut
@@ -67,7 +76,7 @@ Write-Host ""
 Write-Host "Installation completed successfully!" -ForegroundColor Green
 Write-Host ""
 Write-Host "You can now:" -ForegroundColor Yellow
-Write-Host "1. Run from Desktop: Double-click 'YouTube Downloader' shortcut"
+Write-Host "1. Run from Desktop: Double-click 'YouTube Downloader (No CMD)' shortcut (recommended)"
 Write-Host "2. Run from Start Menu: Search for 'YouTube Downloader'"
 Write-Host "3. Run from Command Prompt: YouTubeDownloader.bat"
 Write-Host "4. Run directly: $InstallDir\YouTubeDownloader.bat"
