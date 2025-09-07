@@ -75,11 +75,23 @@ if ($CurrentPath -notlike "*$InstallDir*") {
 Write-Host ""
 Write-Host "Installation completed successfully!" -ForegroundColor Green
 Write-Host ""
+Write-Host "🎵 NEW: MP3 Audio Download Support! 🎵" -ForegroundColor Cyan
+Write-Host "• Extract audio from YouTube videos in multiple formats" -ForegroundColor Gray
+Write-Host "• MP3, M4A, WAV, FLAC, AAC, OGG, OPUS support" -ForegroundColor Gray
+Write-Host "• Quality options from 64k to 320k bitrate" -ForegroundColor Gray
+Write-Host "• Automatic metadata and thumbnail embedding" -ForegroundColor Gray
+Write-Host ""
 Write-Host "You can now:" -ForegroundColor Yellow
 Write-Host "1. Run from Desktop: Double-click 'YouTube Downloader (No CMD)' shortcut (recommended)"
 Write-Host "2. Run from Start Menu: Search for 'YouTube Downloader'"
 Write-Host "3. Run from Command Prompt: YouTubeDownloader.bat"
 Write-Host "4. Run directly: $InstallDir\YouTubeDownloader.bat"
+Write-Host ""
+Write-Host "Features:" -ForegroundColor Cyan
+Write-Host "• Video downloads in multiple formats and qualities" -ForegroundColor Gray
+Write-Host "• Audio-only downloads with high quality MP3 extraction" -ForegroundColor Gray
+Write-Host "• Real-time progress tracking and download controls" -ForegroundColor Gray
+Write-Host "• Metadata embedding for audio files" -ForegroundColor Gray
 Write-Host ""
 Write-Host "Note: Make sure yt-dlp is installed for downloading functionality:" -ForegroundColor Cyan
 Write-Host "  pip install yt-dlp"
