@@ -1,0 +1,58 @@
+YOUTUBE DOWNLOADER PRO - END USER LICENSE AGREEMENT (EULA)
+
+IMPORTANT - READ CAREFULLY: This End User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and [Your Company Name] for the YouTube Downloader Pro software product, which includes computer software and may include associated media, printed materials, and "online" or electronic documentation ("Software").
+
+By installing, copying, or otherwise using the Software, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or use the Software.
+
+SOFTWARE LICENSE
+
+The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The Software is licensed, not sold.
+
+GRANT OF LICENSE
+
+This EULA grants you the following rights:
+
+1. INSTALLATION AND USE: You may install and use one copy of the Software on a single computer.
+
+2. BACKUP COPY: You may make one backup copy of the Software for archival purposes only.
+
+RESTRICTIONS
+
+1. You may not reverse engineer, decompile, or disassemble the Software.
+
+2. You may not rent, lease, lend, or sublicense the Software.
+
+3. You may not use the Software for any illegal purpose or to download copyrighted content without proper authorization.
+
+4. You may not remove or modify any copyright notices or proprietary labels on the Software.
+
+5. You may not distribute, transfer, or share your license with others.
+
+DISCLAIMER OF WARRANTIES
+
+The Software is provided "AS IS" without warranty of any kind. [Your Company Name] disclaims all warranties, either express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose.
+
+LIMITATION OF LIABILITY
+
+In no event shall [Your Company Name] be liable for any damages whatsoever (including, without limitation, damages for loss of business profits, business interruption, loss of business information, or any other pecuniary loss) arising out of the use of or inability to use this Software.
+
+TERMINATION
+
+This license is effective until terminated. This license will terminate automatically without notice from [Your Company Name] if you fail to comply with any provision of this EULA.
+
+GOVERNING LAW
+
+This EULA shall be governed by the laws of [Your Jurisdiction].
+
+COPYRIGHT
+
+Copyright © 2025 [Your Company Name]. All rights reserved.
+
+CONTACT INFORMATION
+
+For questions regarding this EULA, please contact:
+[Your Company Name]
+Email: support@your-company.com
+Website: https://your-website.com
+
+By clicking "I Agree" or by installing the Software, you acknowledge that you have read this EULA, understand it, and agree to be bound by its terms and conditions.
